@@ -1,19 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-theme="light" lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Payoo App</title>
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+
+    <style>
+        * {
+            font-family: "Outfit", sans-serif;
+        }
+    </style>
+
 </head>
 
 <body>
-<h1 class="bg"></h1>
-<button class="btn">click me</button>
+    <section class="min-h-screen max-w-md bg-base-300 mx-auto">
+        <div class="flex flex-col justify-center items-center py-28">
+            <!-- homepage-logo -->
+            <img src="./assets/Logo-full.png" alt="">
+            <!-- homepage form -->
+            <fieldset class="fieldset bg-white rounded-3xl w-xs mt-7 p-5 space-y-2">
+                <label class="label text-[#080808] text-[16px] font-medium">Mobile Number</label>
+                <input id="input-number" type="number" maxlength="11" class="input rounded-full bg-gray-400/10 border-none" placeholder="Enter your number" />
+
+                <label class="label text-[#080808] text-[16px] font-medium">4 Digit Pin</label>
+                <input id="input-pin" type="password" maxlength="4" class="input rounded-full bg-gray-400/10 border-none" placeholder="Enter 4 Digit Pin" />
+
+                <button id="login-btn" class="btn btn-primary mt-4 rounded-full">Login</button>
+            </fieldset>
+        </div>
+    </section>
+    <script src="/js/loginpage.js"></script>
 </body>
 
 </html>
