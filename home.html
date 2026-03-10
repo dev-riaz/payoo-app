@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <section class="min-h-screen max-w-md bg-base-200 mx-auto">
+    <section class="min-h-screen max-w-md bg-base-200 mx-auto border">
         <!-- navbar -->
         <div class="navbar shadow-sm sticky top-0 bg-base-200">
             <div class="navbar-start space-x-2">
@@ -73,27 +73,66 @@
                 </button>
             </div>
         </div>
+        <!-- add money form -->
+        <section id="add-money">
+            <div class="p-4 space-y-4">
+                <h1 class="text-[#080808] text-[18px] font-bold">Add Money</h1>
+                <fieldset class="fieldset bg-white rounded-2xl mt-7 w-full p-5 space-y-2">
+
+                    <label class="label text-[#080808] text-[16px] font-medium">Select A Bank</label>
+                    <select class="select w-full bg-base-200 border-none rounded-3xl">
+                        <option disabled selected>Select back</option>
+                        <option value="DBBL">DBBL</option>
+                        <option value="IBBL">IBBL</option>
+                        <option value="City">City bank</option>
+                    </select>
+
+                    <label class="label text-[#080808] text-[16px] font-medium">Bank Account Number</label>
+                    <input id="agent-number" type="number" maxlength="11"
+                        class="input rounded-full w-full bg-gray-400/10 border-none"
+                        placeholder="Enter 11 digit account number" />
+
+                    <label class="label text-[#080808] text-[16px] font-medium">Amount to Add</label>
+                    <input id="cashout-amount" type="number"
+                        class="input rounded-full w-full bg-gray-400/10 border-none"
+                        placeholder="Add Amount to withdraw" />
+
+                    <label class="label text-[#080808] text-[16px] font-medium">Pin Number</label>
+                    <input id="cashout-pin" type="password" maxlength="4"
+                        class="input rounded-full w-full bg-gray-400/10 border-none"
+                        placeholder="Enter 4 digit pin number" />
+
+                    <button id="withdraw-btn" class="btn btn-primary mt-4 rounded-full">Add Money</button>
+                </fieldset>
+            </div>
+        </section>
         <!-- cash out form -->
-        <div class="p-4 space-y-4">
-            <h1 class="text-[#080808] text-[18px] font-bold">Cash Out</h1>
-            <fieldset class="fieldset bg-white rounded-2xl mt-7 w-full p-5 space-y-2">
-                <label class="label text-[#080808] text-[16px] font-medium">Agent Number</label>
-                <input id="agent-number" type="number" maxlength="11"
-                    class="input rounded-full w-full bg-gray-400/10 border-none" placeholder="Enter 11 digit number" />
+        <section>
+            <div class="p-4 space-y-4">
+                <h1 class="text-[#080808] text-[18px] font-bold">Cash Out</h1>
+                <fieldset class="fieldset bg-white rounded-2xl mt-7 w-full p-5 space-y-2">
+                    <label class="label text-[#080808] text-[16px] font-medium">Agent Number</label>
+                    <input id="agent-number" type="number" maxlength="11"
+                        class="input rounded-full w-full bg-gray-400/10 border-none"
+                        placeholder="Enter 11 digit number" />
 
-                <label class="label text-[#080808] text-[16px] font-medium">Amount</label>
-                <input id="cashout-amount" type="number"
-                    class="input rounded-full w-full bg-gray-400/10 border-none" placeholder="Enter amount to withdraw" />
+                    <label class="label text-[#080808] text-[16px] font-medium">Amount</label>
+                    <input id="cashout-amount" type="number"
+                        class="input rounded-full w-full bg-gray-400/10 border-none"
+                        placeholder="Enter amount to withdraw" />
 
-                <label class="label text-[#080808] text-[16px] font-medium">Pin Number</label>
-                <input id="cashout-pin" type="password" maxlength="4"
-                    class="input rounded-full w-full bg-gray-400/10 border-none"  placeholder="Enter 4 digit pin number" />
+                    <label class="label text-[#080808] text-[16px] font-medium">Pin Number</label>
+                    <input id="cashout-pin" type="password" maxlength="4"
+                        class="input rounded-full w-full bg-gray-400/10 border-none"
+                        placeholder="Enter 4 digit pin number" />
 
-                <button id="withdraw-btn" class="btn btn-primary mt-4 rounded-full">Withdraw Money</button>
-            </fieldset>
-        </div>
+                    <button id="withdraw-btn" class="btn btn-primary mt-4 rounded-full">Withdraw Money</button>
+                </fieldset>
+            </div>
+        </section>
 
     </section>
+    <script src="./js/meshin.js"></script>
     <script src="./js/cashout.js"></script>
 </body>
 
