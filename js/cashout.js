@@ -8,8 +8,8 @@ document.getElementById('withdraw-btn').addEventListener('click', function () {
     const cashoutAmount = getValueFormInput('cashout-amount');
 
     const correctBalance = getBalance()
+
     const newBalance = correctBalance - Number(cashoutAmount);
-    console.log(newBalance);
     if (newBalance < 0) {
         alert('invalid Amount');
         return;
@@ -19,6 +19,16 @@ document.getElementById('withdraw-btn').addEventListener('click', function () {
     if (pin === '1234') {
         alert('Cash Out successful');
         setBalance(newBalance);
+
+        const history = document.getElementById('transaction-container')
+        const newHistory = document.createElement('div');
+        newHistory.innerHTML = `
+         <div class="transaction-card p-5 bg-base-100">
+         Cash out ${cashoutAmount} taka success to ${agentNumber} at ${new Date()}
+         </div>
+        `;
+        history.append(newHistory)
+
     } else {
         alert('invalid pin')
     }
