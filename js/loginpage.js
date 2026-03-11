@@ -7,7 +7,7 @@ document.getElementById('login-btn').addEventListener('click', function () {
 
     if (inputValue === '01312121212' && inputPinValue === '1234') {
         alert('login Successful');
-        window.location.assign("/home.html")
+        window.location.assign("./home.html")
     } else {
         alert('login Failed');
         return;
