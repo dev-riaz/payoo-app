@@ -20,12 +20,16 @@ function showOnly(id) {
     const cashout = document.getElementById('cash-out');
     const history = document.getElementById('history');
     const transferMoney = document.getElementById('transfer-money');
+    const getBonus = document.getElementById('get-bonus');
+    const payBill = document.getElementById('pay-bill');
     // console.log(`add mony ${addMoney},cashout ${cashout}`);
     // sobaike hide kore dew
     addMoney.classList.add('hidden')
     cashout.classList.add('hidden');
     history.classList.add('hidden')
     transferMoney.classList.add('hidden')
+    getBonus.classList.add('hidden')
+    payBill.classList.add('hidden')
 
     // id oala element ta k show koro
     const selected=document.getElementById(id);
